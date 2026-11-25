@@ -1,0 +1,12 @@
+[core]
+	repositoryformatversion = 0
+	filemode = false
+	bare = false
+	logallrefupdates = true
+	symlinks = false
+	ignorecase = true
+[branch "feature/abdelrahman-kotb"]
+	vscode-merge-base = origin/feature/abdelrahman-kotb
+[remote "origin"]
+	url = https://github.com/abdalrahmankotb/Zar3a.git
+	fetch = +refs/heads/*:refs/remotes/origin/*
