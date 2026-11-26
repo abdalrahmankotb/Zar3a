@@ -50,7 +50,7 @@ class SplashAnimation extends StatelessWidget {
                 width: size,
                 height: size,
                 decoration: const BoxDecoration(
-                  color: green,
+                  color: AppColors.primary,
                   shape: BoxShape.circle,
                 ),
               ),
@@ -60,7 +60,7 @@ class SplashAnimation extends StatelessWidget {
                 child: Opacity(
                   opacity: opacity,
                   child: Container(
-                    color: paper,
+                    color: AppColors.background,
                     child: const Center(child: BrandMark()),
                   ),
                 ),

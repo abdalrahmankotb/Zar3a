@@ -51,7 +51,7 @@ class _SplashViewState extends State<SplashView>
         }
       },
       child: Scaffold(
-        backgroundColor: paper,
+        backgroundColor: AppColors.background,
         body: SplashAnimation(controller: controller),
       ),
     );

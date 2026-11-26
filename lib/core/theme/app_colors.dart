@@ -1,4 +1,8 @@
 import 'package:material_ui/material_ui.dart';
 
-const green = Color(0xFF4DA534);
-const paper = Color(0xFFFFFCFF);
+abstract class AppColors {
+  static const primary = Color(0xff4DA634);
+  static const background = Color(0xFFFFFCFF);
+  static const secondary = Color(0xFF2E641F);
+  static const text = Color(0xFF171717);
+}

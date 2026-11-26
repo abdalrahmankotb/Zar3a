@@ -26,9 +26,9 @@ class InterestTile extends StatelessWidget {
         child: Container(
           padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 12),
           decoration: BoxDecoration(
-            color: selected ? const Color(0xFFA7D48D) : paper,
+            color: selected ? const Color(0xFFA7D48D) : AppColors.background,
             border: Border.all(
-              color: selected ? green : const Color(0xFFBBBBBB),
+              color: selected ? AppColors.primary : AppColors.background,
             ),
             borderRadius: BorderRadius.circular(8),
           ),
@@ -37,7 +37,7 @@ class InterestTile extends StatelessWidget {
               Icon(
                 selected ? Icons.check_circle : Icons.radio_button_unchecked,
                 size: 23,
-                color: selected ? green : Colors.black54,
+                color: selected ? AppColors.primary : Colors.black54,
               ),
               const SizedBox(width: 10),
               Expanded(

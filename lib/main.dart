@@ -1,22 +1,21 @@
-import 'package:flutter/widgets.dart';
 import 'package:material_ui/material_ui.dart';
+import 'package:go_router/go_router.dart';
 
-import 'routes/app_router.dart';
-import 'routes/route_names.dart';
-import 'core/theme/app_theme.dart';
-import 'injection_container/injection_container.dart';
+import 'package:zar3a/injection_container/injection_container.dart';
+import 'package:zar3a/routes/app_router.dart';
 
-void main() => runApp(MainApp());
-
-class MainApp extends StatelessWidget {
-  MainApp({super.key}) : dependencies = AppDependencies();
+class MyApp extends StatelessWidget {
   final AppDependencies dependencies;
+  final GoRouter router;
+
+  MyApp({super.key, required this.dependencies})
+    : router = appRouter(dependencies);
   @override
-  Widget build(BuildContext context) => MaterialApp(
-    title: 'zar3a',
-    debugShowCheckedModeBanner: false,
-    theme: buildAppTheme(),
-    initialRoute: RouteNames.splash,
-    onGenerateRoute: (settings) => buildRoute(settings, dependencies),
-  );
+  Widget build(BuildContext context) {
+    return MaterialApp.router(
+      debugShowCheckedModeBanner: false,
+      routerConfig: router,
+      
+    );
+  }
 }

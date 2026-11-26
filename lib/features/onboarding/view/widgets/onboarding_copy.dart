@@ -12,9 +12,9 @@ class OnboardingCopy extends StatelessWidget {
   @override
   Widget build(BuildContext context) => Column(
     children: [
-      Text(title, textAlign: TextAlign.center, style: AppTextStyles.title),
+      Text(title, textAlign: TextAlign.center, style: AppTextStyles.button),
       const SizedBox(height: 16),
-      Text(description, textAlign: TextAlign.center, style: AppTextStyles.body),
+      Text(description, textAlign: TextAlign.center, style: AppTextStyles.button),
     ],
   );
 }

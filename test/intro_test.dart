@@ -9,6 +9,7 @@ import 'dart:async';
 import 'dart:io';
 import 'dart:ui' as ui;
 
+import 'package:go_router/go_router.dart';
 import 'package:material_ui/material_ui.dart';
 import 'package:flutter/rendering.dart';
 import 'package:flutter/services.dart';
@@ -156,7 +157,7 @@ void main() {
   testWidgets('Sign up shows errors and routes to demo verification', (
     t,
   ) async {
-    await t.pumpWidget(MainApp());
+    await t.pumpWidget(MyApp(dependencies: AppDependencies()));
     await t.pump(const Duration(seconds: 4));
     await t.pumpAndSettle();
     final ctx = t.element(find.text('متابعة'));
@@ -199,7 +200,7 @@ void main() {
     await c.close();
   });
   testWidgets('Forgot password navigates through all demo screens', (t) async {
-    await t.pumpWidget(MainApp());
+    await t.pumpWidget(MyApp(dependencies: AppDependencies()));
     await t.pump(const Duration(seconds: 4));
     await t.pumpAndSettle();
     Navigator.pushNamed(t.element(find.text('متابعة')), '/login');
@@ -235,7 +236,7 @@ void main() {
     t.view.devicePixelRatio = 1;
     addTearDown(t.view.resetPhysicalSize);
     addTearDown(t.view.resetDevicePixelRatio);
-    await t.pumpWidget(MainApp());
+    await t.pumpWidget(MyApp(dependencies: AppDependencies()));
     await t.pump(const Duration(seconds: 4));
     await t.pumpAndSettle();
     expect(find.text('متابعة'), findsOneWidget);
@@ -263,7 +264,12 @@ void main() {
       ..addFont(rootBundle.load('assets/Cairo.ttf'));
     await loader.load();
     final key = GlobalKey();
-    await t.pumpWidget(RepaintBoundary(key: key, child: MainApp()));
+    await t.pumpWidget(
+      RepaintBoundary(
+        key: key,
+        child: MyApp(dependencies: AppDependencies()),
+      ),
+    );
     await t.pump();
     var elapsed = 0;
     for (final ms in [0, 650, 1300, 1950, 2500, 3300]) {

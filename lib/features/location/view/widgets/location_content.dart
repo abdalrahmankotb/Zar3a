@@ -39,13 +39,13 @@ class LocationContent extends StatelessWidget {
       const Text(
         'الوصول إلى موقع الجهاز',
         textAlign: TextAlign.center,
-        style: AppTextStyles.title,
+        style: AppTextStyles.button,
       ),
       const SizedBox(height: 16),
       const Text(
         'علشان نقدر نقدملك معلومات زراعية وخدمات مناسبة لموقعك.',
         textAlign: TextAlign.center,
-        style: AppTextStyles.body,
+        style: AppTextStyles.button,
       ),
       const SizedBox(height: 34),
       AppButton(

@@ -1,11 +1,14 @@
+
 class RouteNames {
-  static const recovery = '/recovery';
-  static const login = '/login',
-      signup = '/signup',
-      verification = '/verification';
-  static const splash = '/';
-  static const onboarding = '/onboarding';
-  static const location = '/location';
-  static const preferences = '/preferences';
-  static const ready = '/ready';
+  static const String splash = '/';
+
+  static const String onboarding = '/onboarding';
+  static const String location = '/location';
+  static const String preferences = '/preferences';
+  static const String ready = '/ready';
+
+  static const String login = '/login';
+  static const String signup = '/signup';
+  static const String recovery = '/recovery';
+  static const String verification = '/verification';
 }
