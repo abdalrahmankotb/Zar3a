@@ -1,3 +1,7 @@
+import 'package:go_router/go_router.dart';
+import 'package:zar3a/core/theme/app_colors.dart';
+import 'package:zar3a/core/theme/app_text_styles.dart';
+
 import '../../../../routes/route_names.dart';
 
 import 'package:material_ui/material_ui.dart';
@@ -90,7 +94,7 @@ class _AuthFormState extends State<AuthForm> {
                 alignment: AlignmentDirectional.centerStart,
                 child: TextButton(
                   onPressed: () =>
-                      Navigator.pushNamed(context, RouteNames.recovery),
+                      context.pushNamed(RouteNames.recovery),
                   child: const Text(
                     'هل نسيت كلمة المرور؟',
                     style: TextStyle(color: Color(0xFF4DA534)),
@@ -118,25 +122,20 @@ class _AuthFormState extends State<AuthForm> {
               children: [
                 Text(
                   widget.signup ? 'هل لديك حساب بالفعل؟' : 'هل لديك أي حساب؟',
-                  style: const TextStyle(fontSize: 12),
+                  style: AppTextStyles.bodyMediumBold,
                 ),
                 TextButton(
                   onPressed: widget.onSwitch,
                   child: Text(
                     widget.signup ? 'تسجيل الدخول' : 'إنشاء حساب',
-                    style: const TextStyle(
-                      fontSize: 12,
-                      color: Color(0xFF347D1D),
+                    style: AppTextStyles.bodyMediumBold.copyWith(
+                      color: AppColors.primary,
                     ),
                   ),
                 ),
               ],
             ),
-            const Text(
-              'معاينة الواجهة فقط، بدون تسجيل أو إرسال بريد',
-              textAlign: TextAlign.center,
-              style: TextStyle(fontSize: 10, color: Colors.grey),
-            ),
+           
           ],
         ),
       );

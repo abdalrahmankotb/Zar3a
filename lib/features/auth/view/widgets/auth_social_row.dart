@@ -40,7 +40,7 @@ class AuthSocialRow extends StatelessWidget {
                 context.read<AuthCubit>().previewProvider('Google'),
               ),
               icon: Image.asset(
-                'assets/google_logo.png',
+                'assets/photos/google_logo.png',
                 width: 30,
                 height: 30,
               ),

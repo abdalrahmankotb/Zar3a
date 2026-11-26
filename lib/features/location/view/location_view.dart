@@ -1,3 +1,4 @@
+import 'package:go_router/go_router.dart';
 import 'package:material_ui/material_ui.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -28,10 +29,9 @@ class LocationView extends StatelessWidget {
             }
           } else if (state.status == LocationStatus.accepted ||
               state.status == LocationStatus.skipped) {
-            Navigator.pushNamed(
-              context,
+            context.push(
               RouteNames.preferences,
-              arguments: state.location,
+              extra: state.location,
             );
           }
         },

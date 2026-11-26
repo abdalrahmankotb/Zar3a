@@ -7,7 +7,7 @@ class AuthHeader extends StatelessWidget {
   Widget build(BuildContext context) => Column(
     children: [
       Image.asset(
-        'assets/logo.png',
+        'assets/photos/logo.png',
         width: signup ? 125 : 150,
         height: signup ? 125 : 150,
       ),

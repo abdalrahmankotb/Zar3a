@@ -1,5 +1,7 @@
+import 'package:go_router/go_router.dart';
 import 'package:material_ui/material_ui.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:zar3a/core/theme/app_colors.dart';
 
 import '../../../routes/route_names.dart';
 import '../../../core/widgets/feature_scaffold.dart';
@@ -30,12 +32,8 @@ class PreferencesView extends StatelessWidget {
             const SizedBox(height: 12),
             AppButton(
               text: 'ابدأ الآن',
-              color: const Color(0xFF347D1D),
-              onPressed: () => Navigator.pushNamed(
-                context,
-                RouteNames.login,
-                arguments: cubit.finish(),
-              ),
+              color: AppColors.primary,
+              onPressed: () => context.pushNamed(RouteNames.login, extra: cubit.finish()),
             ),
           ],
         ),

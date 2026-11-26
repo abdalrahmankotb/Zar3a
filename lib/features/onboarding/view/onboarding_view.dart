@@ -1,5 +1,6 @@
 import 'dart:math' as math;
 
+import 'package:go_router/go_router.dart';
 import 'package:material_ui/material_ui.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -36,12 +37,12 @@ class OnboardingView extends StatelessWidget {
             OnboardingActions(
               onNext: () {
                 if (cubit.isLast) {
-                  Navigator.pushNamed(context, RouteNames.location);
+                  context.pushNamed(RouteNames.location, );
                 } else {
                   cubit.next();
                 }
               },
-              onSkip: () => Navigator.pushNamed(context, RouteNames.location),
+              onSkip: () => context.pushNamed(RouteNames.location),
             ),
           ],
         ),

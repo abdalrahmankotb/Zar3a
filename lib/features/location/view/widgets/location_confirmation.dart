@@ -1,3 +1,4 @@
+import 'package:go_router/go_router.dart';
 import 'package:material_ui/material_ui.dart';
 
 import '../../data/model/selected_location.dart';
@@ -30,11 +31,11 @@ Future<bool?> showLocationConfirmation(
       ),
       actions: [
         TextButton(
-          onPressed: () => Navigator.pop(ctx, false),
+          onPressed: () => context.pop(false),
           child: const Text('لا، أعد المحاولة'),
         ),
         FilledButton(
-          onPressed: () => Navigator.pop(ctx, true),
+          onPressed: () => context.pop(true),
           child: const Text('استخدم هذا الموقع'),
         ),
       ],

@@ -24,11 +24,13 @@ class InterestTile extends StatelessWidget {
         onTap: onTap,
         borderRadius: BorderRadius.circular(8),
         child: Container(
+
           padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 12),
           decoration: BoxDecoration(
-            color: selected ? const Color(0xFFA7D48D) : AppColors.background,
+            color: selected ? AppColors.primary : AppColors.background,
             border: Border.all(
-              color: selected ? AppColors.primary : AppColors.background,
+              color: selected ? AppColors.primary : AppColors.text,
+              width: 1,
             ),
             borderRadius: BorderRadius.circular(8),
           ),
@@ -37,14 +39,14 @@ class InterestTile extends StatelessWidget {
               Icon(
                 selected ? Icons.check_circle : Icons.radio_button_unchecked,
                 size: 23,
-                color: selected ? AppColors.primary : Colors.black54,
+                color: selected ? AppColors.background : Colors.black54,
               ),
               const SizedBox(width: 10),
               Expanded(
                 child: Text(label, style: const TextStyle(fontSize: 14)),
               ),
               const SizedBox(width: 8),
-              Image.asset('assets/interest_$index.png', width: 26, height: 26),
+              Image.asset('assets/photos/interest_$index.png', width: 26, height: 26),
             ],
           ),
         ),

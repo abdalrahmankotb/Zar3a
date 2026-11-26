@@ -8,7 +8,7 @@ class BrandMark extends StatelessWidget {
   Widget build(BuildContext context) => Column(
     mainAxisSize: MainAxisSize.min,
     children: [
-      Image.asset('assets/logo.png', width: size, height: size),
+      Image.asset('assets/photos/logo.png', width: size, height: size),
       if (showName) ...[
         const SizedBox(height: 16),
         const Text(

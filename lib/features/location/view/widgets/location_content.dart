@@ -30,7 +30,7 @@ class LocationContent extends StatelessWidget {
         height: math.min(340, height * .43),
         width: double.infinity,
         child: Image.asset(
-          'assets/intro_4.png',
+          'assets/photos/intro_4.png',
           fit: BoxFit.contain,
           filterQuality: FilterQuality.high,
         ),

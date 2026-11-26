@@ -21,7 +21,9 @@ class RecoveryHeader extends StatelessWidget {
     return Column(
       children: [
         Image.asset(
-          step == 1 ? 'assets/verification_mail.png' : 'assets/logo.png',
+          step == 1
+              ? 'assets/photos/verification_mail.png'
+              : 'assets/photos/logo.png',
           height: step == 1 ? 180 : 140,
           width: 220,
         ),
@@ -40,7 +42,6 @@ class RecoveryHeader extends StatelessWidget {
         if (step == 1)
           Text(
             email,
-            textDirection: TextDirection.ltr,
             style: const TextStyle(color: Color(0xFF347D1D)),
           ),
         const SizedBox(height: 28),

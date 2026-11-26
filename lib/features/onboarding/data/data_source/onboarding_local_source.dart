@@ -26,7 +26,7 @@ class OnboardingLocalSource {
     (i) => OnboardingItem(
       title: titles[i],
       description: descriptions[i],
-      image: 'assets/intro_$i.png',
+      image: 'assets/photos/intro_$i.png',
     ),
   );
 }

@@ -42,7 +42,7 @@ GoRouter appRouter(AppDependencies dependencies) {
       // Splash
       GoRoute(
         path: RouteNames.splash,
-        name: 'splash',
+        name: RouteNames.splash,
         builder: (context, state) {
           return BlocProvider(
             create: (_) => SplashCubit(),
@@ -54,7 +54,7 @@ GoRouter appRouter(AppDependencies dependencies) {
       // Onboarding
       GoRoute(
         path: RouteNames.onboarding,
-        name: 'onboarding',
+        name: RouteNames.onboarding,
         builder: (context, state) {
           return BlocProvider(
             create: (_) => OnboardingCubit(dependencies.onboarding),
@@ -66,7 +66,7 @@ GoRouter appRouter(AppDependencies dependencies) {
       // Location
       GoRoute(
         path: RouteNames.location,
-        name: 'location',
+        name: RouteNames.location,
         builder: (context, state) {
           return BlocProvider(
             create: (_) => LocationCubit(dependencies.location),
@@ -78,7 +78,7 @@ GoRouter appRouter(AppDependencies dependencies) {
       // Preferences
       GoRoute(
         path: RouteNames.preferences,
-        name: 'preferences',
+        name: RouteNames.preferences,
         builder: (context, state) {
           return BlocProvider(
             create: (_) => PreferencesCubit(
@@ -95,7 +95,7 @@ GoRouter appRouter(AppDependencies dependencies) {
       // Ready
       GoRoute(
         path: RouteNames.ready,
-        name: 'ready',
+        name: RouteNames.ready,
         builder: (context, state) {
           return ReadyView(
             selection: state.extra is IntroSelection
@@ -108,7 +108,7 @@ GoRouter appRouter(AppDependencies dependencies) {
       // Login
       GoRoute(
         path: RouteNames.login,
-        name: 'login',
+        name: RouteNames.login,
         builder: (context, state) {
           return BlocProvider(
             create: (_) => AuthCubit(dependencies.auth),
@@ -120,7 +120,7 @@ GoRouter appRouter(AppDependencies dependencies) {
       // Signup
       GoRoute(
         path: RouteNames.signup,
-        name: 'signup',
+        name: RouteNames.signup,
         builder: (context, state) {
           return BlocProvider(
             create: (_) => AuthCubit(dependencies.auth),
@@ -132,7 +132,7 @@ GoRouter appRouter(AppDependencies dependencies) {
       // Recovery
       GoRoute(
         path: RouteNames.recovery,
-        name: 'recovery',
+        name: RouteNames.recovery,
         builder: (context, state) {
           return BlocProvider(
             create: (_) => RecoveryCubit(dependencies.auth),
@@ -144,7 +144,7 @@ GoRouter appRouter(AppDependencies dependencies) {
       // Verification
       GoRoute(
         path: RouteNames.verification,
-        name: 'verification',
+        name: RouteNames.verification,
         builder: (context, state) {
           return BlocProvider(
             create: (_) => VerificationCubit(),

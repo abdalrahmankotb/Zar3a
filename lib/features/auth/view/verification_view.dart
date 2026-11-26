@@ -35,7 +35,7 @@ class VerificationView extends StatelessWidget {
                         ),
                       ),
                       Image.asset(
-                        'assets/verification_mail.png',
+                        'assets/photos/verification_mail.png',
                         height: 220,
                         width: 270,
                       ),
@@ -82,10 +82,7 @@ class VerificationView extends StatelessWidget {
                             onPressed: state.seconds == 0
                                 ? () {
                                     cubit.resendPreview();
-                                    showAuthNotice(
-                                      context,
-                                      'معاينة فقط: لم يُرسل أي بريد',
-                                    );
+                                   
                                   }
                                 : null,
                             child: Text(
@@ -101,19 +98,8 @@ class VerificationView extends StatelessWidget {
                       AppButton(
                         text: 'تأكيد',
                         onPressed: () {
-                          if (cubit.check()) {
-                            showAuthNotice(
-                              context,
-                              'هذه معاينة فقط. لم يتم التحقق من الرمز أو تفعيل حساب.',
-                            );
-                          }
+                          if (cubit.check()) {}
                         },
-                      ),
-                      const SizedBox(height: 18),
-                      const Text(
-                        'معاينة فقط: لم يُرسل بريد. لا تدخل رمز تحقق حقيقيا.',
-                        textAlign: TextAlign.center,
-                        style: TextStyle(fontSize: 11, color: Colors.grey),
                       ),
                     ],
                   );
